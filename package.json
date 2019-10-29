@@ -1,0 +1,23 @@
+{
+  "name": "upyun-av-pretreatment",
+  "version": "1.0.0",
+  "description": "又拍云音视频异步处理",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/heathcliff-hu/upyun-av-pretreatment.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/heathcliff-hu/upyun-av-pretreatment/issues"
+  },
+  "homepage": "https://github.com/heathcliff-hu/upyun-av-pretreatment#readme",
+  "dependencies": {
+    "axios": "^0.19.0",
+    "lodash": "^4.17.15"
+  }
+}
