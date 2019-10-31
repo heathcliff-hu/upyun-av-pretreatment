@@ -53,4 +53,18 @@ module.exports = class Client {
 			return response.data;
 		})
   }
+
+	/**
+   * 查询处理结果
+	 * @param {String|Array<String>} taskIds
+	 */
+  async result(taskIds) {
+		if (typeof taskIds === 'string') {
+			taskIds = [taskIds];
+		}
+		return this.req.get(`/result?service=${this.service.name}&task_ids=${taskIds.join(',')}`)
+		.then(function (response) {
+			return response.data;
+		})
+	}
 };
