@@ -1,6 +1,6 @@
 {
   "name": "upyun-av-pretreatment",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "又拍云音视频异步处理",
   "main": "index.js",
   "scripts": {
