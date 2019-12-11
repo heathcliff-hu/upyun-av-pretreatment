@@ -33,7 +33,8 @@ module.exports = class Client {
     	data: qs.stringify(params),
 			method: 'POST',
       headers: {
-    		'Content-Type': 'application/x-www-form-urlencoded',
+				'Content-Type': 'application/x-www-form-urlencoded',
+				accept: 'json',
 			},
 		}).then(function (response) {
 			return response.data
@@ -62,8 +63,10 @@ module.exports = class Client {
 		if (typeof taskIds === 'string') {
 			taskIds = [taskIds];
 		}
-		return this.req.get(`/result?service=${this.service.name}&task_ids=${taskIds.join(',')}`)
-		.then(function (response) {
+		return this.req({
+			url: `/result?service=${this.service.name}&task_ids=${taskIds.join(',')}`,
+			method: 'GET',
+		}).then(function (response) {
 			return response.data;
 		})
 	}
